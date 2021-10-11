@@ -23,9 +23,28 @@ public class CashbackHackServiceTest {
         int expected = 10;
         int actual = service.remain(amount);
 
-        assertEquals(expected, actual);
+        assertEquals(actual, expected);
 
         System.out.println("For get bonuses you need buy for " + expected + " rub");
     }
+    @Test
+    public void NoNeedMoreBuy1000() {
+        int amount = 1000;
+        int expected = 0;
+        int actual = service.remain(amount);
 
+        assertEquals(actual, expected);
+
+        System.out.println("For get bonuses you need buy for " + expected + " rub");
+    }
+    @Test
+    public void NoNeedMoreBuy2000() {
+        int amount = 2000;
+        int expected = 0;
+        int actual = service.remain(amount);
+
+        assertEquals(actual, expected);
+
+        System.out.println("For get bonuses you need buy for " + expected + " rub");
+    }
 }
